@@ -1,0 +1,19 @@
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.containerPrincipal {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #f3f5fc;
+}
+
+.textoEncriptar {
+    position: absolute;
+    width: 42%;
+    
+}
