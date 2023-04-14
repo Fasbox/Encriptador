@@ -26,6 +26,9 @@ function encriptar() {
 
 function desencriptar() {
     let texto = document.getElementById("textoEncriptar").value;
+    let tituloMensaje = document.getElementById("tituloZonaEncriptado");
+    let parrafo = document.getElementById("parrafo");
+    let infografia = document.getElementById("infografia");
 
     let textoEncriptado = texto
         .replace(/ai/gi, "a")
@@ -36,7 +39,7 @@ function desencriptar() {
 
     if (texto.length != 0) {
         document.getElementById("textoEncriptar").value = textoEncriptado;
-        tituloZonaEncriptado.textContent = "Aquí lo tienes recién salido del horno"
+        tituloMensaje.textContent = "Aquí lo tienes recién salido del horno"
         parrafo.textContent = "";
         infografia.src = "./recursos/Desencriptar.png";
     } else {
