@@ -15,5 +15,220 @@
 .textoEncriptar {
     position: absolute;
     width: 42%;
-    
+    height: 60;
+    left: 12%;
+    top: 15%;
+    border: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #f3f5fc;
+}
+
+.textoEncriptar::placeholder {
+    color: #0a3871;
+}
+
+.textoEncriptar:focus,
+.textoEncriptar:active {
+    border: none;
+    outline: none;
+}
+
+.infoEncriptar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 80%;
+}
+
+.infoEncriptar p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+}
+
+.btnEncriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #0a3871;
+    border-radius: 24px;
+    border-style: solid;
+    border-color: #0a3871;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+}
+
+.btnDesencriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #f3f5fc;
+    border-radius: 24px;
+    border-style: solid;
+    border-color: #0a3871;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #0a3871;
+}
+
+.btnDesencriptar:hover,
+.btnEncriptar:hover {
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8%;
+}
+
+.cosasEncriptadas {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background: #fff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+}
+
+.mensajeEncriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+}
+
+.mensajeEncriptado h2 {
+    width: 60%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #0a3871;
+}
+
+.mensajeEncriptado p {
+    width: 80%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+.cosasEncriptadas img{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%;
+}
+
+/* Responsive design */
+@media (max-width: 57.5em) {
+    .containerPrincipal{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cosasEncriptadas {
+        width: 100%;
+    }
+
+    .textoEncriptar {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+    }
+
+    .infoEncriptar {
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+
+    .infoEncriptar p {
+        font-size: 16px;
+    }
+
+    .botones {
+        width: 80%;
+        left: 10%;
+        top: 70%;
+    }
+
+    .btnEncriptar,
+    .btnDesencriptar {
+        width: 48%;
+    }
+
+    .btnDesencriptar:hover,
+    .btnEncriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+
+    .cosasEncriptadas {
+        width: 80%;
+        height: 15%;
+        left: 10%;
+        top: 80%;
+    }
+
+    .mensajeEncriptado {
+        width: 100%;
+        top: 5%
+    }
+
+    .cosasEncriptadas img {
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
 }
