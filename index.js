@@ -20,7 +20,7 @@ function encriptar() {
     } else {
         infografia.src = "./recursos/Researching.png";
         parrafo.textContent = "Recuerda ingresar un texto";
-        alert("Debes ingresar algún texto");
+        swal("Ooops!", "Debes ingresar un texto", "warning");
     }
 }
 
@@ -45,7 +45,7 @@ function desencriptar() {
     } else {
         infografia.src = "./recursos/Researching.png";
         parrafo.textContent = "Recuerda ingresar un texto";
-        alert("Debes ingresar algún texto");
+        swal("Ooops!", "Debes ingresar un texto", "warning");
     }
 
 }

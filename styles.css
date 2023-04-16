@@ -14,6 +14,7 @@
 
 .textoEncriptar {
     position: absolute;
+    resize: none;
     width: 42%;
     height: 60;
     left: 12%;
@@ -69,7 +70,7 @@
     position: absolute;
     width: 80%;
     left: 12%;
-    top: 82%;
+    top: 84%;
 }
 
 .btnEncriptar {
@@ -92,6 +93,7 @@
 .btnDesencriptar {
     align-items: center;
     justify-content: center;
+    margin-inline-start: 3%;
     padding: 2%;
     gap: 8px;
     width: 25%;
@@ -106,7 +108,13 @@
     color: #0a3871;
 }
 
-.btnDesencriptar:hover,
+.btnDesencriptar:hover {
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8%;
+    margin-inline-start: 3%;
+}
+
 .btnEncriptar:hover {
     margin: 0.3%;
     width: 24.5%;
