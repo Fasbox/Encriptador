@@ -1,15 +1,25 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Encriptación de texto</title>
+        <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" href="recursos/favicon.png" type="image/x-icon">
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
-    <body>
+    <body class="main">
+        <header>
+            <div class="grid">
+                <div>
+                    <h1><img src="recursos/LogoEncriptador.png" class="logo"></h1>
+                </div>
+                <div class="tituloPagina">
+                    <h2>Encripta/desencripta tus palabras</h2>
+                </div>
+            </div>
+        </header>
         <div class="containerPrincipal">
             <div class="zonaEncriptar">
                 <textarea
@@ -21,8 +31,14 @@
                 placeholder="Encripta aquí"
                 ></textarea>
 
+                <div>
+                    <button class="botonCopiar" id="botonCopiar" type="button" onclick="copiar()">
+                        Copiar
+                    </button>
+                </div>
+
                 <div class="infoEncriptar">
-                    <p>Solo abecedario anglosajón</p>
+                    <p>Solo minúsculas y sin tildes</p>
                 </div>
 
                 <div class="botones">
@@ -42,6 +58,21 @@
                 </div>
             </div>
         </div>
+        <footer class="footer">
+            <div>
+                <p> © Fabian Camilo Chavarria | 2023</p>
+            </div>
+            <div>
+               <a href="https://github.com/Fasbox">
+                    <img src="recursos/iconoGithub.png" alt=""> 
+                </a>
+
+                <a href="https://www.linkedin.com/in/fabian-chavarria-b7095519b/">
+                    <img src="recursos/iconoLinkedin.png" alt="">
+                </a>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="index.js"></script>
     </body>
-    <script src="index.js"></script>
 </html>

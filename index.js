@@ -17,10 +17,33 @@ function encriptar() {
         tituloMensaje.textContent = "Aquí lo tienes recién salido del horno"
         parrafo.textContent = "";
         infografia.src = "./recursos/Encriptar.png";
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            html: '<b class="sweetAlert"> ¡Encriptado! </b>'
+          })
+
     } else {
         infografia.src = "./recursos/Researching.png";
         parrafo.textContent = "Recuerda ingresar un texto";
-        swal("Ooops!", "Debes ingresar un texto", "warning");
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Recuerda Ingresar un texto',
+          })
     }
 }
 
@@ -42,10 +65,49 @@ function desencriptar() {
         tituloMensaje.textContent = "Aquí lo tienes recién salido del horno"
         parrafo.textContent = "";
         infografia.src = "./recursos/Desencriptar.png";
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            html: '<b class="sweetAlert"> ¡Desencriptado! </b>'
+          })
+
     } else {
         infografia.src = "./recursos/Researching.png";
         parrafo.textContent = "Recuerda ingresar un texto";
-        swal("Ooops!", "Debes ingresar un texto", "warning");
     }
+}
 
+function copiar() {
+    let textoACopiar = document.getElementById("textoEncriptar").value;
+
+    navigator.clipboard.writeText(textoACopiar);
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        html: '<b class="sweetAlert"> ¡Copiado! </b>'
+      })
 }
